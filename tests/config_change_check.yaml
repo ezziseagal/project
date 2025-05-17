@@ -1,0 +1,17 @@
+test_sections:
+  - test_config_stability
+
+test_config_check:
+  source:
+    pkg: genie.libs.sdk
+    class: blitz.Blitz
+  test_data:
+    - execute:
+        command: show running-config
+        save:
+          variable_name: saved_config
+    - execute:
+        command: show running-config
+        include: ["^interface", "^ ip", "^router"]
+        validate:
+          compare: saved_config

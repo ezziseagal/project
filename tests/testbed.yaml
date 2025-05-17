@@ -1,0 +1,11 @@
+devices:
+  R1:
+    os: iosxe
+    type: router
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.56.128
+        port: 22
+        username: cisco
+        password: cisco123!
