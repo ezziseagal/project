@@ -1,0 +1,1 @@
+0 * * * * /usr/bin/python3 /home/devasc/roject/config_monitor.py >> /home/devasc/project/logs/cron_run.log 2>&1
