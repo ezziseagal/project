@@ -58,3 +58,24 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 [*] Łączenie z 192.168.56.129...
 [*] Konfiguracja pobrana.
 [*] Brak zmian w konfiguracji.
+[master ea88bdd] Backup 2025-05-21T19:25:18.065365
+ 6 files changed, 45 insertions(+), 3 deletions(-)
+ create mode 100644 logs/192_168_56_128_diff_20250521_192510.log
+ create mode 100644 logs/192_168_56_129_diff_20250521_192518.log
+To github.com:ezziseagal/project.git
+   0896e80..ea88bdd  master -> master
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_128_diff_20250521_192510.log
+[*] Konfiguracja zapisana do configs/192_168_56_128.cfg
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_129_diff_20250521_192518.log
+[*] Konfiguracja zapisana do configs/192_168_56_129.cfg
+[*] Zmiany zatwierdzone w repozytorium Git.
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
