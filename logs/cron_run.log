@@ -79,3 +79,18 @@ To github.com:ezziseagal/project.git
 [*] Łączenie z 192.168.56.129...
 [*] Konfiguracja pobrana.
 [*] Brak zmian w konfiguracji.
+[master 6c2606f] Backup 2025-05-21T19:35:17.322178
+ 5 files changed, 48 insertions(+), 3 deletions(-)
+ create mode 100644 logs/192_168_56_128_diff_20250521_193509.log
+ create mode 100644 logs/192_168_56_129_diff_20250521_193517.log
+To github.com:ezziseagal/project.git
+   ea88bdd..6c2606f  master -> master
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_128_diff_20250521_193509.log
+[*] Konfiguracja zapisana do configs/192_168_56_128.cfg
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_129_diff_20250521_193517.log
+[*] Konfiguracja zapisana do configs/192_168_56_129.cfg
+[*] Zmiany zatwierdzone w repozytorium Git.
