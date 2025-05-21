@@ -1,0 +1,11 @@
+--- previous
++++ current
+@@ -11,7 +11,7 @@
+ platform punt-keepalive disable-kernel-core
+ platform console virtual
+ !
+-hostname CSR1kv
++hostname CSR2kv
+ !
+ boot-start-marker
+ boot-end-marker
