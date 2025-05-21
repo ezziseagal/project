@@ -1,0 +1,16 @@
+fatal: not a git repository (or any of the parent directories): .git
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_128_diff_20250521_185009.log
+[*] Konfiguracja zapisana do configs/192_168_56_128.cfg
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_129_diff_20250521_185017.log
+[*] Konfiguracja zapisana do configs/192_168_56_129.cfg
+[!] Błąd przy commitowaniu do Git: Command '['git', 'add', 'configs']' returned non-zero exit status 128.
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
