@@ -192,4 +192,78 @@
 +!
 +!
 +!
-+end
++endfrom datetime import datetime
+from netmiko import ConnectHandler
+import os
+import difflib
+
+# === KONFIGURACJA URZĄDZENIA ===
+device = {
+    'device_type': 'cisco_ios',
+    'host': '192.168.56.121',  # adres IP CSR1000v
+    'username': 'cisco',
+    'password': 'cisco123!',
+}
+
+CONFIG_DIR = "configs"
+LOG_FILE = "logs/change_log.txt"
+DEVICE_NAME = "R1"
+CONFIG_FILE = f"{CONFIG_DIR}/{DEVICE_NAME}_config.txt"
+BACKUP_FILE = f"{CONFIG_DIR}/{DEVICE_NAME}_config_backup.txt"
+
+# === FUNKCJA: pobierz konfigurację z urządzenia ===
+def fetch_running_config():
+    print("[*] Łączenie z urządzeniem...")
+    connection = ConnectHandler(**device)
+    output = connection.send_command("show running-config")
+    connection.disconnect()
+    return output
+
+# === FUNKCJA: zapisz konfigurację do pliku ===
+def save_config(config, path):
+    with open(path, "w") as f:
+        f.write(config)
+
+# === FUNKCJA: porównaj bieżącą konfigurację z poprzednią ===
+def compare_configs(new_config, old_config_path):
+    if not os.path.exists(old_config_path):
+        return ["[!] Brak wcześniejszej konfiguracji – nie można porównać."]
+
+    with open(old_config_path, "r") as f:
+        old_config = f.read()
+    
+    diff = list(difflib.unified_diff(
+        old_config.splitlines(),
+        new_config.splitlines(),
+        fromfile='Poprzednia',
+        tofile='Aktualna',
+        lineterm=''
+    ))
+    return diff if diff else ["[*] Brak różnic w konfiguracji."]
+
+# === FUNKCJA: zapisz zmiany do logów ===
+def log_changes(diff_lines):
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, "a") as log:
+        log.write(f"\n--- {datetime.now()} ---\n")
+        for line in diff_lines:
+            log.write(line + "\n")
+    print("[*] Zmiany zapisane w logu.")
+
+# === GŁÓWNY PROCES ===
+def main():
+    os.makedirs(CONFIG_DIR, exist_ok=True)
+    new_config = fetch_running_config()
+    save_config(new_config, CONFIG_FILE)
+    print("[*] Konfiguracja zapisana.")
+
+    diff = compare_configs(new_config, BACKUP_FILE)
+    for line in diff:
+        print(line)
+    log_changes(diff)
+
+    save_config(new_config, BACKUP_FILE)
+    print("[*] Backup zaktualizowany.")
+
+if __name__ == "__main__":
+    main()
