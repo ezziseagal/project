@@ -112,3 +112,15 @@ and the repository exists.
 [!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_129_diff_20250521_194017.log
 [*] Konfiguracja zapisana do configs/192_168_56_129.cfg
 [*] Zmiany zatwierdzone w repozytorium Git.
+[master 83cc202] Backup 2025-05-23T17:01:54.491023
+ 3 files changed, 33 insertions(+), 2 deletions(-)
+ create mode 100644 logs/192_168_56_129_diff_20250523_170154.log
+To github.com:ezziseagal/project.git
+   6c2606f..83cc202  master -> master
+[*] Łączenie z 192.168.56.128...
+[!] Błąd połączenia z 192.168.56.128: Connection to device timed-out: cisco_ios 192.168.56.128:22
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_129_diff_20250523_170154.log
+[*] Konfiguracja zapisana do configs/192_168_56_129.cfg
+[*] Zmiany zatwierdzone w repozytorium Git.
