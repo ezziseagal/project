@@ -344,3 +344,22 @@ To github.com:ezziseagal/project.git
 [*] Łączenie z 192.168.56.129...
 [*] Konfiguracja pobrana.
 [*] Brak zmian w konfiguracji.
+[master 4cd2a58] Backup 2025-05-24T09:06:17.401616
+ 3 files changed, 228 insertions(+), 2 deletions(-)
+ create mode 100644 logs/192_168_56_128_diff_20250524_090609.log
+To github.com:ezziseagal/project.git
+   9eed08f..4cd2a58  master -> master
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[!] Wykryto zmiany! Różnice zapisane w: logs/192_168_56_128_diff_20250524_090609.log
+[*] Konfiguracja zapisana do configs/192_168_56_128.cfg
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
+[*] Zmiany zatwierdzone w repozytorium Git.
+[*] Łączenie z 192.168.56.128...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
+[*] Łączenie z 192.168.56.129...
+[*] Konfiguracja pobrana.
+[*] Brak zmian w konfiguracji.
