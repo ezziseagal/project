@@ -1,0 +1,19 @@
+--- previous
++++ current
+@@ -1,6 +1,6 @@
+ Building configuration...
+ 
+-Current configuration : 4180 bytes
++Current configuration : 4183 bytes
+ !
+ ! Last configuration change at 19:08:38 UTC Fri May 23 2025 by cisco
+ !
+@@ -133,7 +133,7 @@
+ !
+ interface Loopback1
+  description My first NETCONF loopback
+- ip address 10.5.2.2 255.255.0.0
++ ip address 10.10.10.10 255.255.0.0
+ !
+ interface GigabitEthernet1
+  description IPv6 ADDRESS
